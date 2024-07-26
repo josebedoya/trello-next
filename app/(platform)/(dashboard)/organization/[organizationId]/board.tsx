@@ -1,12 +1,13 @@
 import { deleteBoard } from "@/actions/delete-board";
 import { Button } from "@/components/ui/button";
+import { FormDelete } from "./form-delete";
 
-interface IBoardProps {
+interface BoardProps {
   title: string;
   id: string;
 }
 
-export const Board = ({ title, id }: IBoardProps) => {
+export const Board = ({ title, id }: BoardProps) => {
   const deleteBoardWithId = deleteBoard.bind(null, id);
 
   return (
@@ -14,9 +15,7 @@ export const Board = ({ title, id }: IBoardProps) => {
       <p>
         Board title: {title}
       </p>
-      <Button type="submit" variant="destructive" size="sm">
-        Delete
-      </Button>
+      <FormDelete />
     </form>
   )
 }

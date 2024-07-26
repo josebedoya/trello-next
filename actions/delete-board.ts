@@ -10,5 +10,5 @@ export async function deleteBoard(id: string) {
     }
   });
 
-  revalidatePath('organization/org_2f9f7o4XArU5KOkNn9lFMqommOL');
+  revalidatePath('/organization/org_2cSsLr3esqt3UzH0kcqcNqgadje');
 }
